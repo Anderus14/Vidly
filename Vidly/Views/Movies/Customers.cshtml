@@ -1,0 +1,20 @@
+﻿@model Vidly.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customers</h2>
+@if (Model.Customers.Count == 0)
+{
+    <p>We don't havy any customers yet.</p>
+}
+else
+{
+    <table style="width: 100%">
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>@customer.Name</tr>
+            <br />
+        }
+    </table>
+}
