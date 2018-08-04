@@ -1,8 +1,9 @@
 ﻿@model Vidly.ViewModels.RandomMovieViewModel
 @{
     ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="~/Content/bootstrap-lumen.css" rel="stylesheet" />
 <h2>Customers</h2>
 @if (Model.Customers.Count == 0)
 {
@@ -10,11 +11,16 @@
 }
 else
 {
-    <table style="width: 100%">
+    <table class="table table-bordered" style="width: 100%">
+        <tr>
+            <th>Customer</th>
+        </tr>      
         @foreach (var customer in Model.Customers)
-        {
-            <tr>@customer.Name</tr>
-            <br />
-        }
+                       {
+                           <tr>
+                               <td>@customer.Name</td>
+                           </tr>
+                           
+                       }
     </table>
 }
