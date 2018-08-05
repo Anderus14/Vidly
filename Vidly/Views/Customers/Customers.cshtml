@@ -11,14 +11,14 @@
 }
 else
 {
-    <table class="table table-bordered" style="width: 100%">
+    <table class="table table-bordered table-hover" style="width: 100%">
         <tr>
             <th>Customer</th>
         </tr>      
         @foreach (var customer in Model.Customers)
                        {
                            <tr>
-                               <td>@customer.Name</td>
+                               <td>@Html.ActionLink(customer.Name,"Details", "Customers", new {id = Model.Customers.IndexOf(customer) + 1}, null)</td>
                            </tr>
                            
                        }

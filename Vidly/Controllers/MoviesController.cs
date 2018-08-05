@@ -21,25 +21,11 @@ namespace Vidly.Controllers
             var customer = new List<Customer>
             {
                 new Customer {Name = "John Smith"},
-                new Customer { Name = "Mary Doe" }
+                new Customer {Name = "Mary Doe" },
             };
             var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
-                Customers = customer
-            };
-
-            return View(viewModel);
-        }
-        public ActionResult Customers()
-        {
-            var customer = new List<Customer>
-            {
-                new Customer {Name = "John Smith"},
-                new Customer { Name = "Mary Doe" }
-            };
-            var viewModel = new RandomMovieViewModel
-            {
                 Customers = customer
             };
 
