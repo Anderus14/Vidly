@@ -10,10 +10,15 @@
 }
 else
 {
-    <ul>
+        <table class="table table-bordered table-hover" style="width: 100%">
+    <tr>
+        <th>Movie</th>
+    </tr>      
         @foreach (var movie in Model.Movie)
         {
-            <li>@movie.Name</li>
+            <tr>
+                <td>@movie.Name</td>
+            </tr>
         }
-    </ul>
+        </table>
 }
