@@ -12,15 +12,19 @@
 else
 {
     <table class="table table-bordered table-hover" style="width: 100%">
+        <thead>
         <tr>
             <th>Customer</th>
-        </tr>      
+        </tr>
+        </thead>
+        <tbody>
         @foreach (var customer in Model.Customers)
-                       {
-                           <tr>
-                               <td>@Html.ActionLink(customer.Name,"Details", "Customers", new {id = Model.Customers.IndexOf(customer) + 1}, null)</td>
-                           </tr>
-                           
-                       }
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Details", "Customers", new {id = customer.Id}, null)</td>
+            </tr>
+        }
+        </tbody>
+
     </table>
 }
